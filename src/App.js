@@ -10,13 +10,13 @@ import './App.css';
 const App = () => {
   return (
     <Router>
-      <NavBar />
+      {/* <NavBar /> */}
       <Routes>
         <Route exact path="/about" element={<AboutScreen />} />
         <Route exact path="/contact" element={<ContactScreen />} />
         <Route exact path="/" element={<HomeScreen />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }

@@ -1,40 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Table } from 'react-bootstrap';
+import ReactAudioPlayer from 'react-audio-player';
+import "../../css/Home.css"
 
 function Timer() {
-    // const [hours, setHours] = useState();
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
-    // let interval = useRef();
-    // const startTimer = ({ countdownTimestamp }) => {
-    //     interval.current = setInterval(() => {
-    //         const countDownDate = new Date(countdownTimestamp).getTime();
-
-    //         const now = new Date().getTime();
-    //         const distance = countDownDate - now;
-
-    //         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    //         const hours = Math.fllor(
-    //             (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    //         );
-    //         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    //         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    //         if (distance < 0) {
-    //             clearInterval(interval.current);
-    //             setDays(0);
-    //             setHours(0);
-    //             setMinutes(0);
-    //             setSeconds(0);
-    //         }
-    //         else {
-    //             setDays(days);
-    //             setHours(hours);
-    //             setMinutes(minutes);
-    //             setSeconds(seconds);
-    //         }
-    //     }, 1000);
-    // };
     var timer;
     useEffect(() => {
         timer = setInterval(() => {
@@ -57,30 +28,42 @@ function Timer() {
     }
     return (
         <>
+            <ReactAudioPlayer
+                src="./music/music-player_music_summer.mp3"
+                autoPlay={"autoplay"}
+                preLoad="auto"
+                controls
+                loop
+            />
             <div>Timer</div>
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>Minutes</th>
-                        <th>Seconds</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        {/* <td>{days}</td> */}
-                        {/* <td>{hours}</td> */}
-                        <td>
-                            {minutes < 10 ? "0" + minutes : minutes}:
-                        </td>
-                        {/* <td>{seconds}</td> */}
-                        <td>
-                            {seconds < 10 ? "0" + seconds : seconds}
-                        </td>
-                        <button className='restart' onClick={restart}>Restart</button>
-                        <button className='stop' onClick={stop}>Stop</button>
-                    </tr>
-                </tbody>
-            </Table>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>Minutes</th>
+                            <th>Seconds</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                {minutes < 10 ? "0" + minutes : minutes}
+                            </td>
+                            <td>
+                                {seconds < 10 ? "0" + seconds : seconds}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button className='restart' onClick={restart}>Restart</button>
+                            </td>
+                            <td>
+                                <button className='stop' onClick={stop}>Stop</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </Table>
+            </div>
         </>
     );
 }
