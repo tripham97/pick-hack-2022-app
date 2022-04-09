@@ -24,6 +24,8 @@
   }
   .nav-right {
     display: flex;
+    justify-content: center ;
+    align-items: center;
   }
   .nav-right button {
     border: none;
