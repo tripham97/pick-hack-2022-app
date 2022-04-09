@@ -5,12 +5,12 @@ import Timer from './Timer'
 const Home = () => {
     return (
         <div className="navbar">
-            <Form.Select className="dropdown" id="dropdown" label="Select a page">
+            {/* <Form.Select className="dropdown" id="dropdown" label="Select a page">
                 <option>Choose Your Timer</option>
                 <option>5'</option>
                 <option>30'</option>
                 <option>45'</option>
-            </Form.Select>
+            </Form.Select> */}
             <Timer />
             <div>
                 <Button>
