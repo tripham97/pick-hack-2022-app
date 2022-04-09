@@ -1,0 +1,33 @@
+.nav-container {
+  background: transparent;
+    z-index: 100;
+  }
+  .nav-left {
+    display: inline-flex;
+    align-items: center;
+  }
+  .nav-left img {
+    /* position: absolute; */
+    /* margin-top: 15px;*/
+    width: 200px;
+  }
+  .nav-left img:hover {
+    cursor: pointer;
+  }
+  .nav-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+  }
+  .nav-right {
+    display: flex;
+  }
+  .nav-right button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+  }

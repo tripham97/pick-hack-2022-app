@@ -1,0 +1,20 @@
+.footer-left {
+    display: flex;
+  }
+  .footer-left img {
+    display: inline-flex;
+    width: 200px;
+    scroll-behavior: unset;
+    cursor: pointer;
+  }
+  
+  .footer-left p {
+    margin-top: 60px;
+    margin-left: 20px;
+    font-size: 11px;
+  }
+  .footer-right button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
